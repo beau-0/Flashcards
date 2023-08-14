@@ -8,6 +8,8 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import NavigationBar from "../Layout/NavigationBar";
 import ViewDeck from "../view-deck/ViewDeck.js";
 import AddCard from "../view-deck/AddCard.js"
+import EditDeck from "../view-deck/EditDeck.js"
+import EditCard from "../view-deck/EditCard.js"
 
 function Layout() {
 
@@ -20,7 +22,7 @@ function Layout() {
         <Route exact path='/'>
           <GetDecks />
         </Route>
-        <Route path='/create-deck'>
+        <Route path='/decks/new'>
           <CreateDeck />
         </Route>
         <Route exact path='/decks/:deckId'>
@@ -31,6 +33,12 @@ function Layout() {
         </Route>
         <Route path='/decks/:deckId/cards/new'>
           <AddCard />
+        </Route>
+        <Route path='/decks/:deckId/edit' >
+          <EditDeck />
+        </Route>
+        <Route path='/decks/:deckId/cards/:cardId/edit' >
+          <EditCard />
         </Route>
         <Route>
           <NotFound />

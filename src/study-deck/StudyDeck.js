@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { readDeck } from "../utils/api";
 import NavigationBar from "../Layout/NavigationBar.js";
 
@@ -34,7 +34,6 @@ const StudyDeck = () => {
         return () => {abortController.abort()}
     }, [deckId]);
 
-    if (error) {return <div>Error: {error.message}</div>}
     if (isLoading) {return <div>Loading...</div>;}
 
     const handleFlip = () => {
@@ -51,27 +50,47 @@ const StudyDeck = () => {
     }
 
     const identifyButton = () => {
-        if (currentCard === deck.cards.length -1 && isFlipped) {return <button onClick={handleRestart}>restart</button>}
-        if (currentCard === deck.cards.length -1 && !isFlipped) {return <button onClick={handleFlip}>Flip </button>}
-        if (isFlipped && currentCard != deck.cards.length -1) {return <button onClick={handleNextCard}>Next </button>}
-        if (!isFlipped) {return <> <button onClick={handleFlip}>Flip </button> </>}
+        if (currentCard === deck.cards.length -1 && isFlipped) {return <button onClick={handleRestart} class="btn btn-success btn-circle btn-sm">restart</button>}
+        if (currentCard === deck.cards.length -1 && !isFlipped) {return <button onClick={handleFlip} class="btn btn-warning btn-circle btn-sm">Flip </button>}
+        if (isFlipped && currentCard != deck.cards.length -1) {return <button onClick={handleNextCard} class="btn btn-success btn-circle btn-sm">Next </button>}
+        if (!isFlipped) {return <> <button onClick={handleFlip} class="btn btn-warning btn-circle btn-sm">Flip </button> </>}
     }
 
     const handleRestart = () => {
         setCurrentCard(0);
         setCardDisplay(deck.cards[0].front);
+        setIsFlipped(false);
     }
+
+    const NotEnoughCards = ({deckId}) => {
+        return (<div>
+            <h5>Not Enough cards.</h5>
+            <p>Minimum three cards needed.</p>
+            <div>
+            <Link to={`/decks/${deckId}/cards/new`}>
+            <button >Add Cards</button>
+            </Link>
+            </div>
+        </div>)
+    }
+
+    console.log(deck.cards.length)
 
     return (
         <div>
-             <NavigationBar deckDescription={deck.name} deckId={deckId} />
-        <div>
+             <NavigationBar deckTitle={deck.name} deckId={deckId} />
+        <div class="container m-3">
             <h2>Study:  {deck.name}</h2>
         </div>
-        <div>
-            <h3>Card {currentCard +1} of {deck.cards.length} </h3>
-            {identifyButton()}
-            <p>{cardDisplay}</p>
+        <div class="shadow p-3 mb-5 bg-white rounded m-2" >
+            
+            {deck.cards && deck.cards.length > 2 ?
+                <div>
+                <p class="mb-2">Card {currentCard +1} of {deck.cards.length} </p>
+                <p class="mt-2 mt-2 display-4">{cardDisplay}</p>
+                <div class="container mt-3">{identifyButton()}</div>
+                </div> 
+                :<NotEnoughCards deckId={deckId}/>}
         </div>
         </div>
     )
