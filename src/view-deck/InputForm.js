@@ -37,12 +37,7 @@ return (
         <div>
          <button 
          type="submit"  
-         class="btn btn-success btn-sm m-2"  
-        onClick={async () => {
-        await handleSubmit(); 
-        handleClear(); // 
-        }}>
-        
+         class="btn btn-success btn-sm m-2">  
             Save</button>
          <Link to={`/decks/${deckId}`}>
          <button class="btn btn-warning btn-sm m-2" >Done</button>
