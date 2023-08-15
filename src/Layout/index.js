@@ -14,7 +14,7 @@ import EditCard from "../view-deck/EditCard.js"
 function Layout() {
 
   return (
-    <>
+    <div>
       <Header />
       <div className="container">
         <div>
@@ -46,7 +46,7 @@ function Layout() {
         </Switch>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

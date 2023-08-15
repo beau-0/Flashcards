@@ -40,7 +40,7 @@ const [isLoading, setIsLoading] = useState(true);
 
 
 return (
-    <>
+    <div>
     <div>
         <NavigationBar deckTitle={deck.name} deckId={deckId} />
     </div>
@@ -62,7 +62,7 @@ return (
         <h4 class="m-2">Cards: </h4>
         {cardsDisplay}
     </div>
-    </>
+    </div>
 )}
 
 export default ViewDeck;

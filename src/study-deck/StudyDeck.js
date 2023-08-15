@@ -53,7 +53,7 @@ const StudyDeck = () => {
         if (currentCard === deck.cards.length -1 && isFlipped) {return <button onClick={handleRestart} class="btn btn-success btn-circle btn-sm">restart</button>}
         if (currentCard === deck.cards.length -1 && !isFlipped) {return <button onClick={handleFlip} class="btn btn-warning btn-circle btn-sm">Flip </button>}
         if (isFlipped && currentCard != deck.cards.length -1) {return <button onClick={handleNextCard} class="btn btn-success btn-circle btn-sm">Next </button>}
-        if (!isFlipped) {return <> <button onClick={handleFlip} class="btn btn-warning btn-circle btn-sm">Flip </button> </>}
+        if (!isFlipped) {return <div> <button onClick={handleFlip} class="btn btn-warning btn-circle btn-sm">Flip </button> </div>}
     }
 
     const handleRestart = () => {

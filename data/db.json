@@ -42,7 +42,7 @@
       "id": 11
     },
     {
-      "front": "Intro",
+      "front": "Intro sdfgsdfg",
       "back": "March 3, 1969 the United States Navy established an elite school for the top one percent of its pilots. Its purpose was to teach the lost art of aerial combat and to insure that the handful of men who graduated were the best fighter pilots in the world. They succeeded. Today, the Navy calls it Fighter Weapons School. The flyers call it: TOP GUN.",
       "deckId": 7,
       "id": 12
@@ -73,7 +73,7 @@
     },
     {
       "front": "Adding a third card",
-      "back": "to really be sure ",
+      "back": "to reallywe4twe4t be sure ",
       "deckId": 7,
       "id": 17
     },
@@ -94,6 +94,66 @@
       "back": "Let me explain something to you. Um, I am not \"Mr. Lebowski\". You're Mr. Lebowski. I'm the Dude. So that's what you call me. You know, that or, uh, His Dudeness, or uh, Duder, or El Duderino if you're not into the whole brevity thing.",
       "deckId": 9,
       "id": 20
+    },
+    {
+      "front": "testing the new form",
+      "back": "on the front and the editing and back",
+      "deckId": 7,
+      "id": 21
+    },
+    {
+      "front": "does this work",
+      "back": "or not",
+      "deckId": 7,
+      "id": 22
+    },
+    {
+      "front": "asdfasdf",
+      "back": "asdfasdf",
+      "deckId": 7,
+      "id": 23
+    },
+    {
+      "front": "testing",
+      "back": "testing",
+      "deckId": 7,
+      "id": 24
+    },
+    {
+      "front": "1234",
+      "back": "1234",
+      "deckId": 7,
+      "id": 26
+    },
+    {
+      "front": "aasssdddfff",
+      "back": "aaasssddddffff",
+      "deckId": 7,
+      "id": 27
+    },
+    {
+      "front": "5555555",
+      "back": "666666666666",
+      "deckId": 7,
+      "id": 28
+    },
+    {
+      "front": "5555555srgsergsergsergserg",
+      "back": "6666666666sergsergserg66",
+      "deckId": 7,
+      "id": 29
+    },
+    {
+      "front": "5555555srgsergsergsergsergsergserg",
+      "back": "6666666666sergsergserg66sergserg",
+      "deckId": 7,
+      "id": 30
+    },
+    {
+      "front": "55555awefawefawf55srgsergsergsergsergsergserg",
+      "back": "6666666wefawfa666sergsergserg66sergserg",
+      "deckId": 7,
+      "id": 31
     }
   ]
 }

@@ -3,6 +3,7 @@ import { useParams, Link, useHistory } from "react-router-dom";
 import { readDeck, readCard } from "../utils/api";
 import NavigationBar from "../Layout/NavigationBar";
 import { updateCard } from "../utils/api";
+import InputForm from "./InputForm";
 
 
 const EditCard = () => {
@@ -61,22 +62,7 @@ const EditCard = () => {
         <div>
             <NavigationBar deckTitle={deckDescription}/>
             <h4>Edit Card</h4>
-            <div>
-            <form onSubmit={handleSubmit}>
-                <div>
-                <label >Front: &nbsp;&nbsp;&nbsp;&nbsp;</label>
-                <input type="text" id="front" value={front} placeholder="Card Front" onChange={(e) => {setFront(e.target.value) }} ></input>
-                </div>
-                <div>
-                <label >Back: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                <textarea id="description" value={back} placeholder="Card Back" onChange={(e) => {setBack(e.target.value)}}></textarea>
-                </div>
-                <div>
-                <button type="submit" class="btn btn-success btn-sm">Submit</button>
-                <Link to={`/decks/${deckId}`}> <button class="btn btn-warning btn-sm">Cancel</button> </Link>
-                </div>
-            </form>
-    </div>
+            <InputForm deckId={deckId} handleSubmit={handleSubmit} front={front} back={back} setFront={setFront} setBack={setBack} parent={"edit"}/>
         </div>
         )
 
