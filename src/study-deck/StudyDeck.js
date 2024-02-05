@@ -87,7 +87,7 @@ const StudyDeck = () => {
             {deck.cards && deck.cards.length > 2 ?
                 <div>
                 <p class="mb-2">Card {currentCard +1} of {deck.cards.length} </p>
-                <p class="mt-2 mt-2 display-4">{cardDisplay}</p>
+                <p class="mt-2" style={{ fontSize: '2.0rem' }}>{cardDisplay}</p>
                 <div class="container mt-3">{identifyButton()}</div>
                 </div> 
                 :<NotEnoughCards deckId={deckId}/>}
